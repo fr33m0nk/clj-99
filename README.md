@@ -9,7 +9,7 @@ References:
 
 ## Usage
 
-![99 Problems](https://tenor.com/uNsR.gif)
+![99 Problems](https://media1.tenor.com/images/acf9bf5312c29a9f15b1367e3de8885c/tenor.gif)
 
 ## License
 

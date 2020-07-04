@@ -1,5 +1,7 @@
 (ns clj-99.list.problem-04)
 
+;Find the number of elements of a list.
+
 (defn count-of-elements-1
   [ls]
   (loop [ls ls count 0]

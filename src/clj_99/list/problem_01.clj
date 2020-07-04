@@ -13,7 +13,7 @@
 
 (defn my-last-2
   [ls]
-  (let [tail (next ls)]
+  (let [tail (rest ls)]
     (if (empty? tail)
       (first ls)
       (recur tail))))

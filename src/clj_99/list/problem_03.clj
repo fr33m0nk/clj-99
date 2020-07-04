@@ -11,7 +11,7 @@
   (loop [ls ls cnt 1]
     (if (= cnt i)
       (first ls)
-      (recur (next ls) (inc cnt)))))
+      (recur (rest ls) (inc cnt)))))
 
 (defn element-at-2
   [ls i]
@@ -22,10 +22,10 @@
   (loop [ls ls cnt i]
     (if (= cnt 1)
       (first ls)
-      (recur (next ls) (dec cnt)))))
+      (recur (rest ls) (dec cnt)))))
 
 (defn element-at-4
   [ls i]
   (if (or (empty? ls) (= 1 i))
     (first ls)
-    (recur (next ls) (dec i))))
+    (recur (rest ls) (dec i))))

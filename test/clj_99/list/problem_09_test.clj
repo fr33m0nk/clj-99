@@ -29,3 +29,12 @@
   (testing "should empty list for empty list"
     (let [actual (pack-3 [])]
       (is (and (coll? actual) (empty? actual))))))
+
+(deftest pack-4-test
+  (testing "should return separate lists of members with their repeated occurrences of list"
+    (is (= [[1 1 1] [2] [3 3 3] [4 4]] (pack-4 [1 1 1 2 3 3 3 4 4]))))
+  (testing "should return separate lists of members of list"
+    (is (= [[1] [2] [3] [4]] (pack-4 [1 2 3 4]))))
+  (testing "should empty list for empty list"
+    (let [actual (pack-4 [])]
+      (is (and (coll? actual) (empty? actual))))))

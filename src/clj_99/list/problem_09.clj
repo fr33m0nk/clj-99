@@ -28,3 +28,11 @@
   [ls]
   (partition-by identity ls))
 
+(defn pack-4
+  [ls]
+  (lazy-seq
+    (when-let [s (seq ls)]
+      (let [f (first s)
+            repeated-elements (take-while #(= f %) s)]
+        (cons repeated-elements (pack-4 (drop (count repeated-elements) s)))))))
+

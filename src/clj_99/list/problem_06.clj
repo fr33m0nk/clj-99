@@ -13,12 +13,12 @@
   [ls]
   (if (empty? ls)
     false
-    (= ls (apply conj () ls))))
+    (= ls (reduce conj () ls))))
 
 (defn palindrome-3?
   [ls]
   (if (empty? ls)
     false
     (= (compare (vec ls)
-                (vec (apply conj () ls)))
+                (vec (reduce conj () ls)))
        0)))
